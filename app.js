@@ -4,7 +4,7 @@ let forcastdataRow = document.getElementById("forcastdataRow");
 
 
 function currentcity() {
-    let url = "http://api.weatherapi.com/v1/forecast.json?key=0975a3334d124e6bb59130530240904&q=colombo&days=3&aqi=no&alerts=no";
+    let url = "https://api.weatherapi.com/v1/forecast.json?key=0975a3334d124e6bb59130530240904&q=Colombo&days=3&aqi=no&alerts=no";
     fetch(url)
         .then((res) => res.json())
         .then((data) => {
@@ -19,7 +19,7 @@ function currentcity() {
 currentcity();
 function getAnotherCity() {
     let city = document.getElementById("txtCityname").value;
-    let url = `http://api.weatherapi.com/v1/forecast.json?key=0975a3334d124e6bb59130530240904&q=${city}&days=3&aqi=no&alerts=no`;
+    let url = `https://api.weatherapi.com/v1/forecast.json?key=0975a3334d124e6bb59130530240904&q=${city}&days=3&aqi=no&alerts=no`;
 
     fetch(url)
         .then((res) => res.json())
